@@ -10,10 +10,10 @@ from homeassistant.helpers.entityfilter import (
 
 def test_no_filters_case_1() -> None:
     """If include and exclude not included, pass everything."""
-    incl_dom = {}
-    incl_ent = {}
-    excl_dom = {}
-    excl_ent = {}
+    incl_dom = []
+    incl_ent = []
+    excl_dom = []
+    excl_ent = []
     testfilter = generate_filter(incl_dom, incl_ent, excl_dom, excl_ent)
 
     for value in ("sensor.test", "sun.sun", "light.test"):
